@@ -1,45 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pipptop Project</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #0f172a;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PippTop · A little lamb with a big hope</title>
+<meta name="description" content="The story of PippTop, a lamb who survived childhood cancer and walks the world to bring hope to every child still fighting.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐑</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e3f3f1; --paper:rgba(255,255,255,.72); --hbg:rgba(205,234,238,.88); --g1:#bfe3ea; --g2:#e3f3f1; --g3:#fddcb4; --ink:#1d5560; --soft:#5a7f84; --teal:#2f7c86;
+  --gold:#d09a3c; --peach:#fcd8a8; --line:#a9d3d4; --sky:#cdeaee; --brown:#8a4f2a; --fs:1.18rem;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+:root[data-theme="dark"]{
+  --bg:#12303a; --paper:rgba(26,61,72,.8); --hbg:rgba(14,38,48,.9); --g1:#0e2833; --g2:#16394a; --g3:#3d3a3c; --ink:#faf7ee; --soft:#b6d3d4; --teal:#8ccdd2;
+  --gold:#f0c06a; --peach:#5b4a3a; --line:#2c5560; --sky:#1d4753; --brown:#f0c06a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12303a; --paper:rgba(26,61,72,.8); --hbg:rgba(14,38,48,.9); --g1:#0e2833; --g2:#16394a; --g3:#3d3a3c; --ink:#faf7ee; --soft:#b6d3d4; --teal:#8ccdd2;
+  --gold:#f0c06a; --peach:#5b4a3a; --line:#2c5560; --sky:#1d4753; --brown:#f0c06a;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--g2) linear-gradient(180deg,var(--g1) 0%,var(--g2) 50%,var(--g3) 100%) fixed;min-height:100vh;color:var(--ink);font-family:var(--sans);line-height:1.6;transition:background .3s,color .3s}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+header{position:sticky;top:0;z-index:5;background:var(--hbg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:980px;margin:0 auto;padding:.7rem 1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;color:var(--ink);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:.3rem;flex-wrap:wrap}
+nav a{padding:.4rem .8rem;border-radius:999px;text-decoration:none;color:var(--soft);font-weight:600}
+nav a[aria-current="page"]{background:var(--teal);color:var(--bg)}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:.4rem .9rem;font-weight:700}
+button:hover{border-color:var(--gold)}
+main{max-width:980px;margin:0 auto;padding:2rem 1.2rem 4rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;margin:0 0 .6em}
+h1{font-size:clamp(2.4rem,8vw,4.2rem)}
+h2{font-size:clamp(1.6rem,4vw,2.2rem)}
+.hero{display:grid;grid-template-columns:1fr;gap:2rem;justify-items:center;text-align:center;padding:1rem 0 2rem}
+@media(min-width:760px){.hero{grid-template-columns:1.1fr 1fr;text-align:left;justify-items:start;align-items:center}}
+.coin{width:min(320px,78vw);aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center;border:6px solid var(--gold);box-shadow:0 0 0 8px var(--peach),0 0 0 11px var(--brown);justify-self:center;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){.coin{animation:none}html{scroll-behavior:auto}}
+.lead{font-size:1.25rem;color:var(--soft);max-width:34ch}
+.cta{display:inline-block;margin:.4rem .5rem .4rem 0;padding:.8rem 1.4rem;border-radius:999px;background:var(--teal);color:var(--bg);font-weight:700;text-decoration:none}
+.cta.alt{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:1.6rem;margin-top:1.6rem}
+.panel p{max-width:68ch}
+.pillars{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:1.6rem}
+.pillars div{border-left:4px solid var(--brown);padding:.2rem 0 .2rem 1rem}
+.pillars strong{font-family:var(--serif);font-size:1.15rem;display:block}
+.about{display:grid;gap:1.6rem}
+@media(min-width:760px){.about{grid-template-columns:300px 1fr}}
+.about img{width:100%;max-width:300px;aspect-ratio:1;object-fit:cover;border-radius:50%;border:6px solid var(--gold);justify-self:center}
+.list{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.7rem}
+.list a{display:flex;justify-content:space-between;gap:1rem;padding:1rem 1.2rem;background:var(--paper);border:1px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink);font-weight:700}
+.list a:hover{border-color:var(--gold)}
+.list small{color:var(--soft);font-weight:600}
+.tools{display:flex;gap:.5rem;justify-content:flex-end;flex-wrap:wrap}
+article{max-width:42rem;margin:1rem auto 0}
+article h1{font-size:clamp(1.9rem,6vw,2.8rem)}
+article .body p{font-family:var(--serif);font-weight:500;font-size:var(--fs);line-height:1.85;margin:0 0 1.3em}
+.await{margin:2.5rem 0 1rem;padding:1.4rem;text-align:center;border-radius:20px;background:var(--peach);color:var(--ink);font-family:var(--serif);font-size:1.3rem}
+:root[data-theme="dark"] .await{color:var(--ink)}
+.pager{display:flex;justify-content:space-between;gap:.8rem;margin-top:1.6rem;flex-wrap:wrap}
+.pager a,.pager span{padding:.7rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:var(--paper);text-decoration:none;font-weight:700}
+.pager span{opacity:.4}
+footer{text-align:center;color:var(--soft);padding:2rem 1rem 3rem;border-top:1px solid var(--line)}
+</style>
 </head>
 <body>
+<header>
+  <div class="bar">
+    <a class="brand" href="#home">PippTop</a>
+    <nav aria-label="Main">
+      <a href="#home" data-r="home">Home</a>
+      <a href="#about" data-r="about">Meet PippTop</a>
+      <a href="#chapters" data-r="chapters">Chapters</a>
+    </nav>
+    <button id="theme" type="button" aria-label="Switch between day and night mode">Night mode</button>
+  </div>
+</header>
+<main id="app" tabindex="-1"></main>
+<footer>PippTop · A community memecoin for hope.</footer>
 
-    <div class="container">
-        <h1>Pipptop Project</h1>
-        <p>Coming Soon...</p>
-    </div>
+<script src="chapters.js"></script>
+<script>
+var C = window.CHAPTERS || [];
+var app = document.getElementById("app");
+var root = document.documentElement;
 
+/* ---------- storage helpers (safe) ---------- */
+function load(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+function save(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+/* ---------- theme ---------- */
+var themeBtn = document.getElementById("theme");
+function applyTheme(t){
+  root.setAttribute("data-theme", t);
+  themeBtn.textContent = t === "dark" ? "Day mode" : "Night mode";
+}
+var saved = load("pt-theme");
+applyTheme(saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+themeBtn.onclick = function(){
+  var t = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(t); save("pt-theme", t);
+};
+
+/* ---------- text size ---------- */
+var size = parseFloat(load("pt-size")) || 1.18;
+function setSize(d){
+  size = Math.min(1.7, Math.max(0.95, size + d));
+  root.style.setProperty("--fs", size + "rem"); save("pt-size", size);
+}
+root.style.setProperty("--fs", size + "rem");
+
+/* ---------- views ---------- */
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+function home(){
+  var last = C.length;
+  return '<section class="hero"><div>' +
+    '<h1>PippTop</h1>' +
+    '<p class="lead">A little lamb who beat childhood cancer, and now walks the world so no child fights alone.</p>' +
+    '<a class="cta" href="#chapter-' + last + '">Read the latest chapter</a>' +
+    '<a class="cta alt" href="#about">Meet PippTop</a></div>' +
+    '<img class="coin" src="logo.jpeg" alt="PippTop, a smiling lamb wearing a flower crown, on a golden coin"></section>' +
+    '<div class="pillars">' +
+    '<div><strong>Hope</strong>Even the smallest spark can light a long road.</div>' +
+    '<div><strong>Humanity</strong>Children first, always, before weapons and noise.</div>' +
+    '<div><strong>Help</strong>Ordinary people, together, can do what governments will not.</div></div>' +
+    '<div class="panel"><h2>A story told one chapter at a time</h2>' +
+    '<p>PippTop’s journey is only beginning. New chapters arrive step by step, and at the end of each one you will be asked to wait for the next. Come back often.</p></div>';
+}
+
+function about(){
+  return '<div class="about"><img src="logo.jpeg" alt="PippTop the lamb">' +
+    '<div><h1>Meet PippTop</h1>' +
+    '<p>PippTop is a little lamb from a distant mountain valley. As a young lamb she faced the darkest shadow of her life: childhood cancer. Season by season, the valley healed her, and she stood on the highest cliff with a crown of blossoms and a simple scarf, ready for a new purpose.</p>' +
+    '<p>She packed a small brown backpack and walked down into the wider world. There she saw leaders pour endless fortunes into machines of war while children in hospital beds went without enough medicine, comfort or care. She refused to stay silent.</p></div></div>' +
+    '<div class="panel"><h2>Her mission</h2>' +
+    '<p>PippTop turned to the people: the vibrant memecoin community scattered across every corner of the globe. Her call is simple. Put aside the noise, unite under one banner, and turn the power of community into real-world miracles.</p>' +
+    '<p>When ordinary people band together with humor, heart and shared purpose, they can accomplish what governments refuse to do. Communities are uniting, not just for charts or trends, but to stand shoulder to shoulder with every child fighting cancer.</p>' +
+    '<p>From the quietest rural clinics to the busiest city hospitals, PippTop is traveling to visit every child facing the darkness she once knew. She brings warmth where there is fear, laughter where there is pain, and living proof that even the smallest lamb from the furthest valley can help heal the world.</p>' +
+    '<a class="cta" href="#chapters">Start reading</a></div>';
+}
+
+function chapters(){
+  var li = C.map(function(c,i){
+    return '<li><a href="#chapter-' + (i+1) + '"><span>' + esc(c.title) + '</span><small>' + esc(c.date || "") + '</small></a></li>';
+  }).join("");
+  return '<h1>Chapters</h1><p class="lead">' + C.length + (C.length === 1 ? ' chapter is' : ' chapters are') + ' out so far. The next one is on its way.</p><ul class="list">' + li + '</ul>';
+}
+
+function chapter(n){
+  var c = C[n-1];
+  if(!c) return '<h1>Chapter not found</h1><p>This chapter does not exist yet. <a href="#chapters">See all chapters</a>.</p>';
+  var paras = c.text.map(function(p){ return "<p>" + esc(p) + "</p>"; }).join("");
+  var prev = n > 1 ? '<a href="#chapter-' + (n-1) + '">‹ Previous</a>' : '<span>‹ Previous</span>';
+  var next = n < C.length ? '<a href="#chapter-' + (n+1) + '">Next chapter ›</a>' : '<span>Next chapter ›</span>';
+  var wait = n === C.length ? '<div class="await">Await the next chapter…</div>' : '';
+  return '<div class="tools" role="group" aria-label="Text size"><button type="button" id="sm" aria-label="Smaller text">A−</button><button type="button" id="lg" aria-label="Larger text">A+</button></div>' +
+    '<article><h1>' + esc(c.title) + '</h1><div class="body">' + paras + '</div>' + wait +
+    '<div class="pager">' + prev + '<a href="#chapters">All chapters</a>' + next + '</div></article>';
+}
+
+/* ---------- router (only plain #name hashes) ---------- */
+function route(){
+  var h = (location.hash || "#home").slice(1);
+  var key = "home", html;
+  if(h === "about"){ key = "about"; html = about(); }
+  else if(h === "chapters"){ key = "chapters"; html = chapters(); }
+  else if(/^chapter-\d+$/.test(h)){ key = "chapters"; html = chapter(parseInt(h.slice(8), 10)); }
+  else { html = home(); }
+  app.innerHTML = html;
+  document.querySelectorAll("nav a").forEach(function(a){
+    if(a.dataset.r === key) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+  });
+  var sm = document.getElementById("sm"), lg = document.getElementById("lg");
+  if(sm) sm.onclick = function(){ setSize(-0.08); };
+  if(lg) lg.onclick = function(){ setSize(0.08); };
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
 </body>
 </html>
