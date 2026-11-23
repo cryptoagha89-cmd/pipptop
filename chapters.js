@@ -126,3 +126,39 @@ window.PHILOSOPHICAL = {
     "We are a species capable of transcendent grace, yet we mortgage our children’s tomorrows for phantoms of steel and distant stars. Pipptop’s eternal dream is that humanity might one day inherit the profound clarity of a sheep from a forgotten valley discovering at last that the ultimate frontier of human nobility is not the empty dark above, but the healing of the pain within our own neighborhoods, and that the only cargo truly worthy of our stewardship is the unbroken life of a child."
   ]
 };
+
+// ============================================================
+// PIPPTOP Donations page. "[[img:file|alt text]]" puts a picture in the text.
+// "### " = small sub-heading.
+// ============================================================
+window.DONATIONS = {
+  title: "PIPPTOP Donations",
+  text: [
+    "At PIPPTOP, 100% of all creator rewards are dedicated to supporting cancer hospitals in low-income countries, directly funding critical medical care, equipment, and resources where they are needed most. To maintain complete transparency and trust within our community, official donation invoices and receipts will be publicly shared every month, providing a clear, verifiable record of how every contribution is making a real-world impact.",
+    "The World Health Organization (WHO) estimates that roughly 400,000 children and adolescents (ages 0–19) develop cancer globally each year, about 3 children every 4 minutes—while registry-based GLOBOCAN/IARC figures report more than 275,000 new cases in children and young adults (ages 0–19) in 2024 (and 211,080 new childhood cancer cases and 78,441 deaths in 2022), with the gap largely reflecting undiagnosed or unrecorded cases where cancer registries are limited. Leukaemias led by acute lymphoblastic leukaemia (ALL) alongside brain and central nervous system (BCNS) tumours and lymphomas are among the most common types, and close to 90% of affected children live in low- and middle-income countries where survival rates can fall below 30%, compared to over 80% in high-income settings with timely diagnosis and full care.",
+    "## 1. Case Burden vs. Survival Outcomes",
+    "• **Where Cases & Deaths Cluster:** Roughly 80% to 90% of new childhood cancer cases and an estimated 94% of childhood cancer deaths occur in low- and middle-income countries (LMICs).",
+    "• **Wide Survival Gaps:** In high-income countries (HICs), 5-year survival rates often exceed 80% (with 5-year survival for acute lymphoblastic leukaemia exceeding 90% in most HICs and retinoblastoma reaching up to 98% in HICs versus 57% in low-income countries). By contrast, survival in many LMICs is much lower, such as 3-year leukaemia survival ranging from just above 30% in Kenya to nearly 90% in Puerto Rico, and overall 5-year survival reported below 20% in some LMIC settings.",
+    "## 2. Specialist, Bed & Center Concentration",
+    "**Severe Specialist Shortages:** Baseline assessments across ten low- and middle-income countries illustrate how thin specialist capacity can be relative to patient volume:",
+    "• **Senegal:** 1 pediatric oncology/hematology specialist with pediatric cancer units still in development.",
+    "• **Tanzania:** 0 pediatric oncology/hematology specialists, 1 pediatric cancer unit, and 20 dedicated beds while seeing 400–450 patients annually.",
+    "• **Bangladesh:** 2 pediatric oncology/hematology specialists, 2 units (both in the capital), and 50 dedicated beds for 1,000–1,500 patients seen annually.",
+    "• **Vietnam:** 12 specialists across 2 units in two large cities with 200–300 dedicated beds for roughly 1,000 patients seen annually.",
+    "**Urban Clustering:** When dedicated units or beds exist in LMICs, they are frequently concentrated in one or two major cities rather than distributed evenly across regions.",
+    "## 3. Distance, Treatment Abandonment & Complications",
+    "• **Travel & Cost Barriers:** Having care centralized far from home creates long travel times and high out-of-pocket costs; in many LMICs, families can spend more than their entire monthly household income on treatment without sufficient financial assistance.",
+    "• **Treatment Abandonment:** Stopping or missing treatment—driven by cost, distance, lack of housing near hospitals, or caregiver strain—is a major driver of preventable deaths. For example, a multicenter prospective study in Sub-Saharan Africa found treatment abandonment affected nearly 25% of children with common, curable cancers, and that preventing abandonment could raise average survival to roughly 60%.",
+    "• **Treatment-Related Mortality:** Limited diagnostics, drug availability, and supportive care mean children in lower-income settings face higher risks of fatal treatment complications, with a large meta-analysis across 501 studies (68,351 pediatric patients) estimating treatment-related mortality at 14.19% in low-income countries and 9.21% in lower-middle-income countries, compared with roughly 3–5% in high-income countries.",
+    "## Candidates",
+    "[[img:candidates.jpeg|Infographic titled Candidates to Receive PIPPTOP Creator Reward Monthly, comparing Senegal, Tanzania, Bangladesh and Vietnam by number of pediatric oncology specialists, units, beds and patients seen each year.]]",
+    "### A — Senegal (Aristide Le Dantec Hospital, Dakar)",
+    "Standing as a candidate to receive PIPPTOP’s monthly Creator Reward, Senegal faces foundational capacity constraints with 1 pediatric oncology/hematology specialist and pediatric cancer units still in development. Directing community-backed creator rewards toward care centered around Aristide Le Dantec Hospital in Dakar can help bridge urgent gaps for children traveling from outside the capital while early regional infrastructure is being built, turning PIPPTOP’s humanitarian mission into tangible relief where specialized capacity is still taking root.",
+    "### B — Tanzania (Bugando Medical Centre, Mwanza)",
+    "With 0 pediatric oncology/hematology specialists, 1 pediatric cancer unit, and 20 dedicated beds serving 400–450 patients annually, Tanzania represents one of the sharpest resource bottlenecks among the four candidates for PIPPTOP’s Creator Reward. Channeling monthly creator rewards to support pediatric oncology care at Bugando Medical Centre in Mwanza can ease severe inpatient crowding, offset heavy travel and treatment burdens for families across the Lake Zone, and reinforce frontline clinical teams caring for hundreds of children every year.",
+    "### C — Bangladesh (National Institute of Cancer Research & Hospital, Dhaka)",
+    "As a candidate for PIPPTOP’s Creator Reward, Bangladesh carries a heavy annual patient load of 1,000–1,500 children against 2 pediatric oncology/hematology specialists, 2 units (both in the capital), and 50 dedicated beds. Concentrating pediatric units in Dhaka while managing over a thousand young patients each year creates intense pressure on beds, diagnostics, and lower-income families traveling from across the country—making monthly PIPPTOP support a meaningful boost to patient assistance and clinical strain relief at NICRH.",
+    "### D — Vietnam (Vietnam National Children’s Hospital, Hanoi)",
+    "Positioned as the fourth candidate for PIPPTOP’s Creator Reward, Vietnam has 12 specialists across 2 units in two large cities and 200–300 dedicated beds for roughly 1,000 patients seen annually. While its specialist workforce and bed capacity are substantially higher than those of Senegal, Tanzania, and Bangladesh, high referral demand and multi-year treatment expenses still weigh heavily on families—meaning PIPPTOP’s Creator Reward could help sustain patient support, reduce out-of-pocket strain, and strengthen ongoing pediatric cancer care."
+  ]
+};

@@ -70,6 +70,10 @@ article{max-width:42rem;margin:1rem auto 0}
 article h1{font-size:clamp(1.9rem,6vw,2.8rem)}
 article .body p{font-family:var(--serif);font-weight:500;font-size:var(--fs);line-height:1.85;margin:0 0 1.3em}
 article .body h2{font-size:clamp(1.3rem,3.5vw,1.6rem);margin:2em 0 .6em;color:var(--teal)}
+article .body h3{font-size:1.15rem;margin:1.6em 0 .4em;color:var(--ink)}
+.fig{margin:1rem 0 2rem}
+.fig img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);display:block}
+.fig figcaption{font-size:.85rem;color:var(--soft);text-align:center;margin-top:.5rem}
 article .body ul,article .body ol{font-family:var(--serif);font-weight:500;font-size:var(--fs);line-height:1.8;margin:0 0 1.3em;padding-left:1.4em}
 article .body li{margin-bottom:.6em}
 .await{margin:2.5rem 0 1rem;padding:1.4rem;text-align:center;border-radius:20px;background:var(--peach);color:var(--ink);font-family:var(--serif);font-size:1.3rem}
@@ -95,6 +99,7 @@ footer{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-alig
       <a href="#about" data-r="about">Meet PippTop</a>
       <a href="#chapters" data-r="chapters">Chapters</a>
       <a href="#philosophical" data-r="philosophical">Philosophical</a>
+      <a href="#donations" data-r="donations">PIPPTOP Donations</a>
     </nav>
     <button id="theme" type="button" aria-label="Switch between day and night mode">Night mode</button>
   </div>
@@ -188,7 +193,11 @@ function renderBody(L){
       out+="<ol>";
       while(i<L.length && /^\d+\. /.test(L[i])){ out+="<li>"+inl(L[i].replace(/^\d+\. /,""))+"</li>"; i++; }
       out+="</ol>";
-    } else if(l.indexOf("## ")===0){ out+="<h2>"+inl(l.slice(3))+"</h2>"; i++; }
+    } else if(l.indexOf("[[img:")===0){
+      var m = l.slice(6,-2).split("|");
+      out+='<figure class="fig"><a href="'+esc(m[0])+'" target="_blank" rel="noopener"><img src="'+esc(m[0])+'" alt="'+esc(m[1]||"")+'" loading="lazy"></a><figcaption>Tap the picture to open it full size.</figcaption></figure>'; i++;
+    } else if(l.indexOf("### ")===0){ out+="<h3>"+inl(l.slice(4))+"</h3>"; i++; }
+    else if(l.indexOf("## ")===0){ out+="<h2>"+inl(l.slice(3))+"</h2>"; i++; }
     else { out+="<p>"+inl(l)+"</p>"; i++; }
   }
   return out;
@@ -199,6 +208,14 @@ function philo(){
   if(!P) return '<h1>Philosophical</h1><p>Coming soon.</p>';
   return '<div class="tools" role="group" aria-label="Text size"><button type="button" id="sm" aria-label="Smaller text">A−</button><button type="button" id="lg" aria-label="Larger text">A+</button></div>' +
     '<article><h1>' + esc(P.title) + '</h1><p class="eyebrow">' + esc(P.subtitle) + '</p><div class="body">' + renderBody(P.text) + '</div>' +
+    '<div class="pager"><a href="#home">‹ Home</a><a href="#chapters">Read the story ›</a></div></article>';
+}
+
+function donations(){
+  var D = window.DONATIONS;
+  if(!D) return '<h1>PIPPTOP Donations</h1><p>Coming soon.</p>';
+  return '<div class="tools" role="group" aria-label="Text size"><button type="button" id="sm" aria-label="Smaller text">A−</button><button type="button" id="lg" aria-label="Larger text">A+</button></div>' +
+    '<article><h1>' + esc(D.title) + '</h1><div class="body">' + renderBody(D.text) + '</div>' +
     '<div class="pager"><a href="#home">‹ Home</a><a href="#chapters">Read the story ›</a></div></article>';
 }
 
@@ -219,6 +236,7 @@ function route(){
   var h = (location.hash || "#home").slice(1);
   var key = "home", html;
   if(h === "about"){ key = "about"; html = about(); }
+  else if(h === "donations"){ key = "donations"; html = donations(); }
   else if(h === "philosophical"){ key = "philosophical"; html = philo(); }
   else if(h === "chapters"){ key = "chapters"; html = chapters(); }
   else if(/^chapter-\d+$/.test(h)){ key = "chapters"; html = chapter(parseInt(h.slice(8), 10)); }
