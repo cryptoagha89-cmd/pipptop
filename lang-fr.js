@@ -82,3 +82,61 @@ window.L.fr.chapters[1] = {
     "Préparez-vous. La révolution des brebis a commencé. 🐑🚀"
   ]
 };
+
+window.L.fr.chapters[2] = {
+  title: "La métaphysique pastorale de Pipptop : une élégie pour les priorités terrestres",
+  text: [
+    "Bien au-delà de la frénétique architecture de l’ambition humaine, blottie dans un pli silencieux et oublié de la terre où l’herbe sauvage boit la plus ancienne rosée, demeure Pipptop. Elle n’est pas une créature ordinaire du troupeau. Tandis que les siens broutent dans la torpeur paisible des horizons immédiats, la conscience de Pipptop s’étend par-delà les vallées, à l’écoute du bourdonnement sourd et discordant d’un monde blessé — une civilisation éclairée par la lueur crue des écrans, vibrante des tremblements de l’acier, et étouffée par la respiration haletante d’enfants qui mènent des guerres silencieuses contre les ténèbres.",
+    "Pipptop est appelée à errer. Son voyage n’est pas une migration de survie, mais un pèlerinage métaphysique — une parabole vivante jetée sur les labyrinthes de béton des empires humains.",
+    "## I. L’astronomie du salut égaré",
+    "L’humanité, enivrée de sa propre ingéniosité, a appris à calculer la géométrie du cosmos et à lancer des flèches métalliques dans le gouffre silencieux de l’espace. Nous hypothéquons notre trésor commun pour percer des vides inutiles et forger des instruments d’anéantissement afin de partager le sol fragile que nous habitons déjà.",
+    "Debout sur sa colline verdoyante, le regard tourné vers les cieux, Pipptop pose une question qui touche l’os même de la vanité humaine : selon quelle arithmétique morale prodiguons-nous des fortunes à des rochers morts et à l’évasion céleste, tandis que des incarnations vivantes et respirantes du cosmos — nos enfants — dépérissent dans des services stériles ?",
+    "Selon la philosophie de la brebis, la fusée n’est pas un monument de triomphe, mais un artefact de terreur existentielle — une distraction scintillante forgée parce que l’humanité est trop lâche pour affronter sa propre fragilité. La guerre est le caprice primitif des puissants, dévorant la nourriture vitale destinée à l’aube de demain. Chaque monnaie brûlée dans la stratosphère ou investie dans la machinerie de la dévastation est un souffle volé, un printemps tronqué refusé à un enfant qui ne demande rien de plus que la simple grâce de vieillir.",
+    "## II. Le sanctuaire de la présence vulnérable",
+    "La descente de Pipptop dans les capitales rugissantes du monde est un acte de solidarité radicale. Elle ne nourrit aucune illusion de débattre avec des hommes d’État dans des salles de marbre ni de réécrire des politiques dans des chambres bureaucratiques. Elle cherche plutôt les marges calmes et ombragées où se déroule la vraie tragédie humaine.",
+    "Elle vient presser sa laine douce et immaculée contre la peau fiévreuse d’un enfant dont les cheveux ont été emportés par l’alchimie de la chimiothérapie. Dans l’épistémologie du pâturage, le vrai pouvoir n’est jamais bruyant ; il se trouve dans la douceur radicale. La métropole tentaculaire, avec ses monuments imposants et ses sirènes indifférentes, se dissout dans l’insignifiance lorsqu’un enfant qui souffre pose sa joue contre quelque chose de chaud, d’innocent et de vivant.",
+    "Pipptop comprend qu’une société qui abandonne sa jeunesse la plus fragile souffre d’une profonde maladie ontologique — un mal collectif de l’âme qu’aucune trajectoire orbitale ne peut fuir et qu’aucune suprématie technologique ne peut guérir.",
+    "## III. La transvaluation de la valeur",
+    "L’architecture de la vision de Pipptop exige une inversion radicale de la valeur humaine :",
+    "• **L’horizon de la fusée** mesure la grandeur à la distance conquise, à la vitesse atteinte et à la domination affirmée. C’est une économie guidée par l’ego, entretenue par l’illusion de l’évasion.",
+    "• **L’horizon de Pipptop** mesure la civilisation à la souffrance atténuée, au réconfort rétabli et à l’innocence protégée. C’est une économie d’intendance, consacrée au devoir sacré de protéger l’aube.",
+    "L’appel de Pipptop est une invitation à ancrer notre regard commun. Cessons de chercher le salut dans les cieux tandis que les fleurs les plus rares et les plus fragiles de notre propre écosystème sont laissées seules à combattre l’abîme. Faisons passer le grand livre de l’arsenal au sanctuaire. Échangeons la trajectoire du missile contre la guérison de l’enfant.",
+    "## L’horizon qui se déploie",
+    "Quand les sabots silencieux de Pipptop s’éloigneront des pavés des grands centres humains, elle ne laissera derrière elle aucune loi codifiée, seulement un éveil troublant et lumineux dans le cœur de ceux qui l’auront vue : nous avons perdu le fil de notre propre humanité.",
+    "Nous sommes une espèce capable d’une grâce transcendante, et pourtant nous hypothéquons les lendemains de nos enfants pour des fantômes d’acier et d’étoiles lointaines. Le rêve éternel de Pipptop est que l’humanité hérite un jour de la profonde clarté d’une brebis d’une vallée oubliée qui découvre enfin que la dernière frontière de la noblesse humaine n’est pas l’obscurité vide d’en haut, mais la guérison de la douleur au sein de nos propres quartiers, et que le seul chargement vraiment digne de notre intendance est la vie intacte d’un enfant."
+  ]
+};
+window.L.fr.chapters[3] = {
+  title: "Dépêche de l’horizon : l’appel de Pipptop à la communauté mondiale",
+  text: [
+    "Des replis silencieux et doux d’herbe d’une vallée lointaine, portée par le vent qui touche chaque frontière, vient la voix tranquille de Pipptop.",
+    "Aux habitants des cités de pierre, aux gardiens des foyers, et à tous ceux qui errent sous le vaste ciel indifférent :",
+    "Écoutez. Trop longtemps, notre regard s’est fracturé. Nous avons tendu le cou vers l’obscurité froide et lointaine, déversant notre sueur et nos trésors dans des fusées d’acier, tandis que la lumière la plus précieuse de notre monde — nos enfants, qui combattent l’ombre du cancer — est laissée à lutter dans le silence de chambres stériles. Nous avons échangé l’intendance sacrée de la vie contre l’architecture tonitruante de la guerre et de l’évasion, oubliant qu’une civilisation se juge non à la distance sur laquelle elle peut lancer un missile dans le vide, mais à la douceur avec laquelle elle tient ses plus fragiles.",
+    "Je ne suis qu’une brebis d’une vallée oubliée, et pourtant le battement de cœur de chaque enfant qui souffre résonne contre les collines où je broute. Leur douleur est notre douleur ; leurs lendemains volés sont notre perte commune.",
+    "C’est pourquoi j’en appelle à chaque communauté, à chaque cœur qui bat encore de compassion, et à chaque âme lasse du registre de la destruction : déposons nos armes de division. Cessons notre course effrénée vers les étoiles tandis que notre propre jardin se flétrit.",
+    "Unissons-nous dans une communion nouvelle et radicale :",
+    "• Pour réorienter nos trésors des arsenaux de guerre et de la vanité des fusées vers les sanctuaires de la guérison.",
+    "• Pour engager notre solidarité non envers des drapeaux ou des frontières, mais envers les vies innocentes qui se battent pour leur premier vrai printemps.",
+    "• Pour nous souvenir que la vraie grandeur se mesure au réconfort que nous offrons aux faibles et à l’avenir intact que nous assurons à nos enfants.",
+    "Détournez votre regard du ciel. Tournez-vous les uns vers les autres. Que la chaleur de notre miséricorde collective éclipse le feu froid de nos machines. Ensemble, bâtissons un monde digne des enfants que nous cherchons à sauver."
+  ]
+};
+window.L.fr.chapters[4] = {
+  title: "Dépêche des ruines : l’appel de Pipptop à travers les cendres",
+  text: [
+    "Portée par un vent brisé à travers des vallées jadis vertes et des cités désormais tombées dans le silence, vient la voix tranquille et résolue de Pipptop.",
+    "Aux survivants dispersés des communautés du Memecoin, à chaque foyer devenu froid et à chaque esprit courbé sous le poids des ruines :",
+    "Regardez autour de nous. Les monuments imposants de notre orgueil se sont effondrés en poussière. Les murs de pierre auxquels nous faisions confiance pour nous protéger se sont rendus à la terre, et les communautés que nous avions bâties ensemble ont été emportées par les tempêtes de notre propre fabrication. Le silence a gagné les rues où vivait le rire, et l’horizon paraît vaste, vide et terriblement sombre.",
+    "Il est facile, en cette heure de désolation, de croire que l’histoire est finie. Il est facile de regarder les pierres brisées et de penser que l’espoir, lui aussi, a été enseveli sous les décombres.",
+    "Écoutez-moi, voyageurs du monde brisé : ne perdez pas espoir.",
+    "Les cités disparues étaient bâties sur des fondations fragiles — sur l’arithmétique froide des fusées, l’acier de la division et la poursuite creuse de cieux lointains, tandis que notre propre chair et notre propre sang souffraient dans l’obscurité. Ce monde devait tomber pour que quelque chose de plus vrai puisse prendre racine.",
+    "Nos communautés ne se définissent ni par le mortier, ni par le marbre, ni par les cartes. Elles se forgent partout où deux cœurs décident que la souffrance d’un enfant compte plus que l’orgueil des empires ; partout où des mains se tendent à travers les cendres pour en relever une autre ; partout où nous choisissons la douceur plutôt que le désespoir.",
+    "Même si nos foyers ont disparu, notre devoir sacré demeure intact :",
+    "• **Que la chute de l’ancien monde nous dépouille de nos illusions.** Nous n’avons plus d’armes à brandir ni de fusées à poursuivre ; nous n’avons que les uns les autres, et la terre brute et magnifique sous nos pieds.",
+    "• **Rassemblez-vous là où la chaleur persiste.** Cherchez-vous dans les vallées paisibles et les coins d’ombre. Partagez le peu de réconfort qui reste, et laissez l’innocence des enfants pour lesquels nous nous battons être la boussole qui guide notre reconstruction.",
+    "• **Engagez-vous envers l’aube.** De ce désert, ne bâtissons pas de nouvelles forteresses de guerre, mais des sanctuaires de guérison, de paix et de compassion radicale.",
+    "La vallée est silencieuse ce soir, mais les étoiles au-dessus de nous sont les mêmes qui ont regardé notre commencement. Nous ne sommes pas perdus ; on nous demande simplement de recommencer — plus propres, plus sages, et liés ensemble par un amour qu’aucune catastrophe ne pourra jamais vaincre.",
+    "Prenez ma main — ou appuyez-vous contre ma toison. Nous marchons ensemble vers le matin."
+  ]
+};
+window.L.fr.philosophical = { title: "Le fondement philosophique de PIPPTOP", subtitle: window.L.fr.chapters[2].title, text: window.L.fr.chapters[2].text };

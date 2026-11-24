@@ -82,3 +82,61 @@ window.L.es.chapters[1] = {
     "Prepárate. La revolución de las ovejas ha comenzado. 🐑🚀"
   ]
 };
+
+window.L.es.chapters[2] = {
+  title: "La metafísica pastoral de Pipptop: una elegía por las prioridades terrenales",
+  text: [
+    "Muy lejos de la frenética arquitectura de la ambición humana, acunada en un silencioso y olvidado pliegue de la tierra donde la hierba silvestre bebe el rocío más antiguo, habita Pipptop. No es una criatura común del rebaño. Mientras los suyos pastan en el sereno letargo de horizontes inmediatos, la conciencia de Pipptop se extiende por los valles, sintonizada con el zumbido grave y discordante de un mundo herido: una civilización iluminada por el resplandor áspero de las pantallas, que vibra con los temblores del acero y se ahoga con la respiración entrecortada de niños que libran guerras silenciosas contra la oscuridad.",
+    "Pipptop está llamada a vagar. Su viaje no es una migración de supervivencia, sino una peregrinación metafísica: una parábola viva lanzada sobre los laberintos de concreto de los imperios humanos.",
+    "## I. La astronomía de la salvación extraviada",
+    "La humanidad, embriagada por su propia astucia, ha aprendido a calcular la geometría del cosmos y a lanzar torres metálicas al silencioso abismo del espacio. Hipotecamos nuestro tesoro colectivo para perforar vacíos y forjar instrumentos de aniquilación para repartirnos el frágil suelo que ya compartimos.",
+    "De pie sobre su verde colina, mirando hacia los cielos, Pipptop plantea una pregunta que llega hasta el hueso de la vanidad humana: ¿con qué aritmética moral derrochamos fortunas en rocas muertas y evasión celestial, mientras encarnaciones vivas y palpitantes del cosmos —nuestros niños— se marchitan en salas estériles?",
+    "Para la filosofía de la oveja, el cohete no es un monumento al triunfo, sino un artefacto del terror existencial: una brillante distracción forjada porque la humanidad es demasiado cobarde para enfrentarse a su propia fragilidad. La guerra es la rabieta primitiva de los poderosos, que devora el alimento vital destinado al amanecer de mañana. Cada moneda quemada en la estratosfera o invertida en la maquinaria de la devastación es un aliento robado, una primavera truncada que se le niega a un niño que no pide nada más que la simple gracia de envejecer.",
+    "## II. El santuario de la presencia vulnerable",
+    "El descenso de Pipptop a las rugientes capitales del mundo es un acto de solidaridad radical. No alberga ilusiones de debatir con estadistas en salones de mármol ni de reescribir políticas en cámaras burocráticas. Busca, en cambio, los márgenes quietos y sombríos donde se desarrolla la verdadera tragedia humana.",
+    "Viene a apoyar su lana suave e inmaculada contra la piel afiebrada de un niño cuyo cabello ha sido reclamado por la alquimia de la quimioterapia. En la epistemología del pasto, el verdadero poder nunca es ruidoso; se halla en la gentileza radical. La metrópolis inmensa, con sus monumentos imponentes y sus sirenas indiferentes, se disuelve en la insignificancia cuando un niño que sufre apoya su mejilla contra algo cálido, inocente y vivo.",
+    "Pipptop comprende que una sociedad que abandona a sus jóvenes más frágiles sufre una profunda enfermedad ontológica: un mal colectivo del alma que ninguna trayectoria orbital puede dejar atrás y que ninguna supremacía tecnológica puede curar.",
+    "## III. La transvaloración del valor",
+    "La arquitectura de la visión de Pipptop exige una inversión radical del valor humano:",
+    "• **El horizonte del cohete** mide la grandeza por la distancia conquistada, la velocidad alcanzada y el dominio afirmado. Es una economía impulsada por el ego, sostenida por la ilusión de escapar.",
+    "• **El horizonte de Pipptop** mide la civilización por el sufrimiento mitigado, el consuelo restaurado y la inocencia protegida. Es una economía de custodia, consagrada al deber sagrado de proteger el amanecer.",
+    "El ruego de Pipptop es una invitación a anclar nuestra mirada colectiva. Dejemos de buscar la salvación en los cielos mientras las flores más raras y frágiles de nuestro propio ecosistema se quedan luchando solas contra el abismo. Traslademos el libro de cuentas del arsenal al santuario. Cambiemos la trayectoria del misil por la recuperación del niño.",
+    "## El horizonte que se despliega",
+    "Cuando los silenciosos cascos de Pipptop se desvanezcan de los adoquines de los grandes centros humanos, no dejará tras de sí leyes codificadas, solo un despertar inquietante y luminoso en el corazón de quienes la contemplaron: hemos perdido el hilo de nuestra propia humanidad.",
+    "Somos una especie capaz de una gracia trascendente, y aun así hipotecamos el mañana de nuestros hijos por fantasmas de acero y estrellas lejanas. El sueño eterno de Pipptop es que la humanidad herede algún día la profunda claridad de una oveja de un valle olvidado que descubre por fin que la última frontera de la nobleza humana no es la oscuridad vacía de arriba, sino la sanación del dolor dentro de nuestros propios barrios, y que la única carga verdaderamente digna de nuestra custodia es la vida intacta de un niño."
+  ]
+};
+window.L.es.chapters[3] = {
+  title: "Un despacho desde el horizonte: el llamado de Pipptop a la comunidad global",
+  text: [
+    "Desde los silenciosos y dulces pliegues de hierba de un valle lejano, llevada por el viento que toca cada frontera, llega la voz tranquila de Pipptop.",
+    "A los habitantes de las ciudades de piedra, a los guardianes de los hogares y a todos los que vagan bajo el vasto cielo indiferente:",
+    "Escuchen. Durante demasiado tiempo nuestra mirada ha estado fracturada. Hemos estirado el cuello hacia la oscuridad fría y distante, vertiendo nuestro sudor y nuestro tesoro en cohetes de acero, mientras la luz más preciosa de nuestro mundo —nuestros niños, que combaten la sombra del cáncer— se queda luchando en habitaciones silenciosas y estériles. Hemos cambiado la custodia sagrada de la vida por la arquitectura atronadora de la guerra y la evasión, olvidando que una civilización se juzga no por la distancia a la que puede lanzar un misil al vacío, sino por la delicadeza con que sostiene a sus más frágiles.",
+    "Solo soy una oveja de un valle olvidado, pero el latido de cada niño que sufre resuena contra las colinas donde pasto. Su dolor es nuestro dolor; sus mañanas robadas son nuestra pérdida colectiva.",
+    "Por eso hago un llamado a cada comunidad, a cada corazón que aún late con compasión y a toda alma cansada del libro de cuentas de la destrucción: depongamos nuestras armas de división. Cesemos nuestra frenética carrera hacia las estrellas mientras nuestro propio jardín se marchita.",
+    "Unámonos en una comunión nueva y radical:",
+    "• Para redirigir nuestros tesoros de los arsenales de guerra y la vanidad de los cohetes hacia los santuarios de la sanación.",
+    "• Para comprometer nuestra solidaridad no con banderas ni fronteras, sino con las vidas inocentes que luchan por su primera verdadera primavera.",
+    "• Para recordar que la verdadera grandeza se mide por el consuelo que ofrecemos a los débiles y el futuro intacto que aseguramos a nuestros hijos.",
+    "Aparten la mirada de los cielos. Miren hacia los demás. Que el calor de nuestra compasión colectiva eclipse el fuego frío de nuestras máquinas. Juntos, construyamos un mundo digno de los niños que buscamos salvar."
+  ]
+};
+window.L.es.chapters[4] = {
+  title: "Un despacho desde las ruinas: el llamado de Pipptop a través de las cenizas",
+  text: [
+    "Llevada por un viento quebrado a través de valles que fueron verdes y ciudades ahora silenciosas, llega la voz tranquila y firme de Pipptop.",
+    "A los restos dispersos de las comunidades del Memecoin, a cada hogar que se ha enfriado y a cada espíritu doblegado por el peso de la ruina:",
+    "Miren a nuestro alrededor. Los imponentes monumentos de nuestro orgullo se han derrumbado en polvo. Los muros de piedra en los que confiábamos para protegernos se han rendido a la tierra, y las comunidades que construimos juntos han sido arrastradas por las tempestades de nuestra propia hechura. El silencio ha reclamado las calles donde antes vivía la risa, y el horizonte se ve vasto, vacío y terriblemente sombrío.",
+    "Es fácil, en esta hora de desolación, creer que la historia ha terminado. Es fácil mirar las piedras destrozadas y pensar que la esperanza también ha quedado enterrada bajo los escombros.",
+    "Escúchenme, caminantes del mundo roto: no pierdan la esperanza.",
+    "Las ciudades que desaparecieron se levantaron sobre cimientos frágiles: sobre la fría aritmética de los cohetes, el acero de la división y la búsqueda vacía de cielos lejanos, mientras nuestra propia carne y sangre sufrían en la oscuridad. Ese mundo tenía que caer para que algo más verdadero echara raíces.",
+    "Nuestras comunidades no se definen por el mortero, el mármol ni los mapas. Se forjan dondequiera que dos corazones deciden que el sufrimiento de un niño importa más que el orgullo de los imperios; dondequiera que unas manos se extienden entre la ceniza para levantar a otro; dondequiera que elegimos la gentileza en lugar de la desesperación.",
+    "Aunque nuestros hogares han desaparecido, nuestro deber sagrado permanece intacto:",
+    "• **Que la caída del viejo mundo nos despoje de nuestras ilusiones.** Ya no tenemos armas que empuñar ni cohetes que perseguir; solo nos tenemos unos a otros y la tierra cruda y hermosa bajo nuestros pies.",
+    "• **Reúnanse donde aún perdura el calor.** Búsquense en los valles tranquilos y en los rincones sombríos. Compartan el poco consuelo que queda, y que la inocencia de los niños por quienes luchamos sea la brújula que guíe nuestra reconstrucción.",
+    "• **Comprométanse con el amanecer.** De este erial, no construyamos nuevas fortalezas de guerra, sino santuarios de sanación, paz y compasión radical.",
+    "El valle está en silencio esta noche, pero las estrellas sobre nosotros son las mismas que contemplaron nuestro comienzo. No estamos perdidos; simplemente se nos pide comenzar de nuevo, más limpios, más sabios y unidos por un amor que ninguna catástrofe podrá jamás vencer.",
+    "Tomen mi mano, o apóyense en mi vellón. Caminamos juntos hacia la mañana."
+  ]
+};
+window.L.es.philosophical = { title: "Trasfondo filosófico de PIPPTOP", subtitle: window.L.es.chapters[2].title, text: window.L.es.chapters[2].text };
