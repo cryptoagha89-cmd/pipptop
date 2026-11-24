@@ -51,3 +51,34 @@ window.L.fr.donations = {
     "Quatrième candidat à la récompense de créateur de PIPPTOP, le Vietnam compte 12 spécialistes répartis dans 2 unités de deux grandes villes et 200 à 300 lits dédiés pour environ 1 000 patients vus chaque année. Même si ses effectifs de spécialistes et ses capacités en lits sont nettement supérieurs à ceux du Sénégal, de la Tanzanie et du Bangladesh, la forte demande d’orientation et les frais de traitement sur plusieurs années pèsent encore lourdement sur les familles. La récompense de créateur de PIPPTOP pourrait donc aider à maintenir le soutien aux patients, réduire les dépenses restant à leur charge et renforcer la prise en charge continue du cancer de l’enfant."
   ]
 };
+
+window.L.fr.chapters = window.L.fr.chapters || [];
+window.L.fr.chapters[0] = {
+  title: "Prologue : La brebis de la vallée",
+  text: [
+    "Loin au-dessus des rivières argentées sinueuses et des villages tranquilles d’une lointaine vallée de montagne, là où le soleil du matin vient d’abord embrasser les sommets poudrés de neige, vivait une petite brebis nommée PIPPTOP.",
+    "Alors qu’elle n’était qu’une jeune brebis, PIPPTOP affronta la plus sombre ombre de sa vie : le cancer de l’enfant. Dans la solitude paisible de cette vallée reculée, entourée d’un air de montagne vif et de fleurs alpines épanouies, elle mena son combat jour après jour. Certaines nuits, quand le croissant de lune pendait, froid, dans le ciel et que ses forces semblaient minces, elle s’accrochait pourtant à une étincelle d’espoir têtue.",
+    "Peu à peu, saison après saison, la vallée la guérit. Le jour où sa laine redevint épaisse et lumineuse et où son cœur battit fort, sans douleur, PIPPTOP se tint au bord de la plus haute falaise, une couronne de fleurs de la vallée sur la tête et une simple écharpe autour du cou. Regardant vers l’horizon où se levait le soleil, elle ouvrit grand les bras vers le ciel, non seulement pour célébrer sa survie, mais animée d’un nouveau but farouche.",
+    "Elle fit son petit sac à dos marron et commença la longue marche le long du sentier sinueux de la montagne, vers les villes animées et le vaste monde au-delà."
+  ]
+};
+window.L.fr.chapters[1] = {
+  title: "Découvrez PIPPTOP : la brebis memecoin en mission pour conquérir le monde et soigner les enfants ! 🐑✨",
+  text: [
+    "Le monde des memecoins est sur le point de changer pour toujours. Découvrez PIPPTOP, la brebis la plus ambitieuse du monde, au cœur d’or et avec un projet de conquête planétaire en tête.",
+    "Alors que la plupart des memecoins ne sont bâtis que pour le buzz, PIPPTOP est là pour prouver que la culture internet et la puissance d’une immense communauté peuvent servir un bien profond et concret. L’objectif ultime de PIPPTOP est simple : devenir le memecoin numéro un du monde entier. Et elle va y parvenir en ayant un impact massif.",
+    "## L’engagement PIPPTOP : 100 % des récompenses de créateur pour la charité",
+    "Lorsqu’un jeton est lancé sur pump.fun, les créateurs pensent souvent d’abord à eux-mêmes. PIPPTOP fait exactement le contraire.",
+    "Nous nous engageons officiellement à reverser 100 % de toutes les récompenses de créateur générées sur pump.fun directement à des œuvres caritatives.",
+    "• **La mission :** Chaque mois, 100 % des récompenses accumulées seront versées directement à un hôpital pour enfants qui soigne des enfants atteints de cancer dans un pays en développement ou aux ressources limitées.",
+    "• **Transparence totale :** Nous voulons que notre communauté voie la différence réelle que nous faisons ensemble. Chaque mois, des reçus publics et le suivi des dons seront partagés avec le troupeau.",
+    "## Pourquoi PIPPTOP ?",
+    "1. **Une puissance de meme inarrêtable :** Une brebis mignonne et intrépide qui mène la charge vers le sommet des classements crypto.",
+    "2. **Conçu pour le bien :** Nous ne nous contentons pas de trader des graphiques ; nous finançons des traitements vitaux pour les enfants qui en ont le plus besoin.",
+    "3. **Un impact porté par la communauté :** Chaque détenteur, acheteur et membre de la communauté devient une pièce essentielle d’un mouvement mondial qui transforme les memes en médecine.",
+    "## Rejoignez le troupeau",
+    "PIPPTOP ne peut pas atteindre seule la première place : elle a besoin de son troupeau derrière elle. Que vous soyez là pour la culture, pour les graphiques ou pour la chance de changer la vie d’enfants à travers le monde, votre heure est venue.",
+    "Montrons au monde ce qu’une communauté crypto unie peut accomplir lorsque nous visons le sommet tout en veillant sur l’humanité.",
+    "Préparez-vous. La révolution des brebis a commencé. 🐑🚀"
+  ]
+};

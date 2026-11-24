@@ -51,3 +51,34 @@ window.L.es.donations = {
     "Como cuarto candidato a la recompensa de creador de PIPPTOP, Vietnam cuenta con 12 especialistas repartidos en 2 unidades de dos grandes ciudades y de 200 a 300 camas dedicadas para unos 1000 pacientes atendidos al año. Aunque su plantilla de especialistas y su capacidad de camas son sustancialmente mayores que las de Senegal, Tanzania y Bangladesh, la alta demanda de derivaciones y los gastos de tratamiento de varios años siguen pesando mucho sobre las familias. Por eso, la recompensa de creador de PIPPTOP podría ayudar a sostener el apoyo a los pacientes, reducir la presión de los gastos de bolsillo y fortalecer la atención continua del cáncer infantil."
   ]
 };
+
+window.L.es.chapters = window.L.es.chapters || [];
+window.L.es.chapters[0] = {
+  title: "Prólogo: La oveja del valle",
+  text: [
+    "Muy por encima de los sinuosos ríos plateados y de los tranquilos pueblos de un lejano valle de montaña, donde el sol de la mañana besa primero las cumbres salpicadas de nieve, vivía una pequeña oveja llamada PIPPTOP.",
+    "Cuando era apenas una oveja joven, PIPPTOP enfrentó la sombra más oscura de su vida: el cáncer infantil. En la quieta soledad de aquel valle remoto, rodeada de aire fresco de montaña y de flores alpinas en plena floración, libró su batalla día tras día. Hubo noches en que la luna creciente colgaba fría en el cielo y sus fuerzas parecían diminutas, pero aun así se aferró a una terca chispa de esperanza.",
+    "Poco a poco, estación tras estación, el valle la sanó. Cuando por fin llegó el día en que su lana volvió a crecer espesa y brillante y su corazón latía fuerte, sin dolor, PIPPTOP se paró al borde del acantilado más alto, con una corona de flores del valle y una sencilla bufanda al cuello. Mirando hacia el horizonte por donde salía el sol, abrió los brazos de par en par hacia el cielo, no solo para celebrar que había sobrevivido, sino con un nuevo y feroz propósito.",
+    "Preparó una pequeña mochila marrón y comenzó la larga caminata por el sinuoso sendero de la montaña hacia las bulliciosas ciudades y el vasto mundo más allá."
+  ]
+};
+window.L.es.chapters[1] = {
+  title: "Conoce a PIPPTOP: ¡la oveja memecoin en una misión para conquistar el mundo y sanar a los niños! 🐑✨",
+  text: [
+    "El mundo de las memecoins está a punto de cambiar para siempre. Conoce a PIPPTOP, la oveja más ambiciosa del mundo, con un corazón de oro y una toma global en mente.",
+    "Mientras la mayoría de las memecoins se crean solo para el hype, PIPPTOP está aquí para demostrar que la cultura de internet y el enorme poder de una comunidad pueden aprovecharse para un bien profundo y real. El objetivo final de PIPPTOP es simple: convertirse en la memecoin número uno del mundo entero. Y lo hará generando un impacto enorme.",
+    "## La promesa de PIPPTOP: el 100 % de las recompensas de creador para caridad",
+    "Cuando un token se lanza en pump.fun, los creadores suelen mirar por sí mismos. PIPPTOP hace exactamente lo contrario.",
+    "Nos comprometemos oficialmente a destinar el 100 % de todas las recompensas de creador generadas en pump.fun directamente a la caridad.",
+    "• **La misión:** Cada mes, el 100 % de las recompensas acumuladas se donará directamente a un hospital infantil que trate a niños con cáncer en un país en desarrollo o con pocos recursos.",
+    "• **Transparencia total:** Queremos que nuestra comunidad vea la diferencia real que estamos logrando juntos. Cada mes se compartirán con el rebaño recibos públicos y el seguimiento de las donaciones.",
+    "## ¿Por qué PIPPTOP?",
+    "1. **Poder de meme imparable:** Una oveja linda e intrépida que lidera la carga hacia lo más alto de las listas cripto.",
+    "2. **Creada para el bien:** No solo operamos con gráficos; financiamos tratamientos que salvan vidas para los niños que más los necesitan.",
+    "3. **Impacto impulsado por la comunidad:** Cada holder, comprador y miembro de la comunidad se convierte en una parte vital de un movimiento global que convierte los memes en medicina.",
+    "## Únete al rebaño",
+    "PIPPTOP no puede llegar sola al puesto n.º 1: necesita a su rebaño detrás. Ya sea que estés aquí por la cultura, por los gráficos o por la oportunidad de cambiar la vida de niños en todo el mundo, tu momento es ahora.",
+    "Mostremos al mundo lo que una comunidad cripto unida puede lograr cuando apuntamos a lo más alto y velamos por la humanidad.",
+    "Prepárate. La revolución de las ovejas ha comenzado. 🐑🚀"
+  ]
+};
