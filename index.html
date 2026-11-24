@@ -87,6 +87,8 @@ article .body li{margin-bottom:.6em}
 .social a:hover{background:var(--gold);transform:translateY(-3px)}
 .social svg{width:22px;height:22px;fill:currentColor}
 .eyebrow{color:var(--soft);font-family:var(--serif);font-size:1.2rem;margin:-.4rem 0 1.6rem}
+select{font:inherit;font-weight:700;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:.4rem .7rem;cursor:pointer}
+.note{background:var(--peach);color:var(--ink);padding:.6rem 1rem;border-radius:12px;font-size:.95rem}
 footer{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-align:center;color:var(--soft);padding:2rem 1rem 3rem;border-top:1px solid var(--line)}
 </style>
 </head>
@@ -101,6 +103,7 @@ footer{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-alig
       <a href="#philosophical" data-r="philosophical">Philosophical</a>
       <a href="#donations" data-r="donations">PIPPTOP Donations</a>
     </nav>
+    <select id="lang" aria-label="Language / 语言 / Langue / Idioma"></select>
     <button id="theme" type="button" aria-label="Switch between day and night mode">Night mode</button>
   </div>
 </header>
@@ -108,33 +111,56 @@ footer{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-alig
 <footer id="foot"></footer>
 
 <script src="chapters.js"></script>
+<script src="lang-zh.js"></script>
+<script src="lang-fr.js"></script>
+<script src="lang-es.js"></script>
 <script>
 var C = window.CHAPTERS || [];
 var SOC = '<div class="social">' +
   '<a href="https://x.com/PIPPTOP?s=20" target="_blank" rel="noopener noreferrer" aria-label="PippTop on X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>' +
   '<a href="https://t.me/pipptop" target="_blank" rel="noopener noreferrer" aria-label="PippTop on Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a></div>';
-document.getElementById("foot").innerHTML = SOC + '<span>PippTop · A community memecoin for hope.</span>';
+var L = window.L = window.L || {};
+L.en = {
+  title:"PippTop · A little sheep with a big hope",
+  nav:{home:"Home",about:"Meet PippTop",chapters:"Chapters",philosophical:"Philosophical",donations:"PIPPTOP Donations"},
+  night:"Night mode", day:"Day mode",
+  lead:"A little sheep who beat childhood cancer, and now walks the world so no child fights alone.",
+  cta1:"Read the latest chapter", cta2:"Meet PippTop",
+  pil:[["Hope","Even the smallest spark can light a long road."],["Humanity","Children first, always, before weapons and noise."],["Help","Ordinary people, together, can do what governments will not."]],
+  storyH:"A story told one chapter at a time",
+  storyP:"PippTop’s journey is only beginning. New chapters arrive step by step, and at the end of each one you will be asked to wait for the next. Come back often.",
+  aboutH:"Meet PippTop",
+  about:["PippTop is a little sheep from a distant mountain valley. As a young sheep she faced the darkest shadow of her life: childhood cancer. Season by season, the valley healed her, and she stood on the highest cliff with a crown of blossoms and a simple scarf, ready for a new purpose.","She packed a small brown backpack and walked down into the wider world. There she saw leaders pour endless fortunes into machines of war while children in hospital beds went without enough medicine, comfort or care. She refused to stay silent."],
+  missionH:"Her mission",
+  mission:["PippTop turned to the people: the vibrant memecoin community scattered across every corner of the globe. Her call is simple. Put aside the noise, unite under one banner, and turn the power of community into real-world miracles.","When ordinary people band together with humor, heart and shared purpose, they can accomplish what governments refuse to do. Communities are uniting, not just for charts or trends, but to stand shoulder to shoulder with every child fighting cancer.","From the quietest rural clinics to the busiest city hospitals, PippTop is traveling to visit every child facing the darkness she once knew. She brings warmth where there is fear, laughter where there is pain, and living proof that even the smallest sheep from the furthest valley can help heal the world."],
+  start:"Start reading",
+  chH:"Chapters", chOne:"{n} chapter is out so far. The next one is on its way.", chMany:"{n} chapters are out so far. The next one is on its way.",
+  prev:"Previous", next:"Next chapter", all:"All chapters", await:"Await the next chapter…",
+  nf:"Chapter not found", nfp:"This chapter does not exist yet.", home:"Home", read:"Read the story",
+  notr:"This part is not translated yet, so it is shown in English.",
+  smaller:"Smaller text", larger:"Larger text", footer:"PippTop · A community memecoin for hope."
+};
+var LANGS = [["en","English"],["zh","中文"],["fr","Français"],["es","Español"]];
+var lang = "en";
+function T(k){ var d = L[lang] && L[lang][k]; return d !== undefined ? d : L.en[k]; }
+
 var app = document.getElementById("app");
 var root = document.documentElement;
+var sel = document.getElementById("lang");
+sel.innerHTML = LANGS.map(function(x){ return '<option value="'+x[0]+'">'+x[1]+'</option>'; }).join("");
 
-/* ---------- storage helpers (safe) ---------- */
 function load(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
 function save(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
 
-/* ---------- theme ---------- */
 var themeBtn = document.getElementById("theme");
 function applyTheme(t){
   root.setAttribute("data-theme", t);
-  themeBtn.textContent = t === "dark" ? "Day mode" : "Night mode";
+  themeBtn.textContent = T(t === "dark" ? "day" : "night");
 }
-var saved = load("pt-theme");
-applyTheme(saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
 themeBtn.onclick = function(){
   var t = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
   applyTheme(t); save("pt-theme", t);
 };
-
-/* ---------- text size ---------- */
 var size = parseFloat(load("pt-size")) || 1.18;
 function setSize(d){
   size = Math.min(1.7, Math.max(0.95, size + d));
@@ -142,44 +168,7 @@ function setSize(d){
 }
 root.style.setProperty("--fs", size + "rem");
 
-/* ---------- views ---------- */
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
-
-function home(){
-  var last = C.length;
-  return '<section class="hero"><div>' +
-    '<h1>PippTop</h1>' +
-    '<p class="lead">A little sheep who beat childhood cancer, and now walks the world so no child fights alone.</p>' +
-    '<a class="cta" href="#chapter-' + last + '">Read the latest chapter</a>' +
-    '<a class="cta alt" href="#about">Meet PippTop</a>' + SOC + '</div>' +
-    '<img class="coin" src="logo.jpeg" alt="PippTop, a smiling sheep wearing a flower crown, on a golden coin"></section>' +
-    '<div class="pillars">' +
-    '<div><strong>Hope</strong>Even the smallest spark can light a long road.</div>' +
-    '<div><strong>Humanity</strong>Children first, always, before weapons and noise.</div>' +
-    '<div><strong>Help</strong>Ordinary people, together, can do what governments will not.</div></div>' +
-    '<div class="panel"><h2>A story told one chapter at a time</h2>' +
-    '<p>PippTop’s journey is only beginning. New chapters arrive step by step, and at the end of each one you will be asked to wait for the next. Come back often.</p></div>';
-}
-
-function about(){
-  return '<div class="about"><img src="logo.jpeg" alt="PippTop the sheep">' +
-    '<div><h1>Meet PippTop</h1>' +
-    '<p>PippTop is a little sheep from a distant mountain valley. As a young sheep she faced the darkest shadow of her life: childhood cancer. Season by season, the valley healed her, and she stood on the highest cliff with a crown of blossoms and a simple scarf, ready for a new purpose.</p>' +
-    '<p>She packed a small brown backpack and walked down into the wider world. There she saw leaders pour endless fortunes into machines of war while children in hospital beds went without enough medicine, comfort or care. She refused to stay silent.</p></div></div>' +
-    '<div class="panel"><h2>Her mission</h2>' +
-    '<p>PippTop turned to the people: the vibrant memecoin community scattered across every corner of the globe. Her call is simple. Put aside the noise, unite under one banner, and turn the power of community into real-world miracles.</p>' +
-    '<p>When ordinary people band together with humor, heart and shared purpose, they can accomplish what governments refuse to do. Communities are uniting, not just for charts or trends, but to stand shoulder to shoulder with every child fighting cancer.</p>' +
-    '<p>From the quietest rural clinics to the busiest city hospitals, PippTop is traveling to visit every child facing the darkness she once knew. She brings warmth where there is fear, laughter where there is pain, and living proof that even the smallest sheep from the furthest valley can help heal the world.</p>' +
-    '<a class="cta" href="#chapters">Start reading</a></div>';
-}
-
-function chapters(){
-  var li = C.map(function(c,i){
-    return '<li><a href="#chapter-' + (i+1) + '"><span>' + esc(c.title) + '</span><small>' + esc(c.date || "") + '</small></a></li>';
-  }).join("");
-  return '<h1>Chapters</h1><p class="lead">' + C.length + (C.length === 1 ? ' chapter is' : ' chapters are') + ' out so far. The next one is on its way.</p><ul class="list">' + li + '</ul>';
-}
-
 function inl(t){ return esc(t).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>"); }
 function renderBody(L){
   var out="", i=0, l;
@@ -203,41 +192,62 @@ function renderBody(L){
   return out;
 }
 
-function philo(){
-  var P = window.PHILOSOPHICAL;
-  if(!P) return '<h1>Philosophical</h1><p>Coming soon.</p>';
-  return '<div class="tools" role="group" aria-label="Text size"><button type="button" id="sm" aria-label="Smaller text">A−</button><button type="button" id="lg" aria-label="Larger text">A+</button></div>' +
-    '<article><h1>' + esc(P.title) + '</h1><p class="eyebrow">' + esc(P.subtitle) + '</p><div class="body">' + renderBody(P.text) + '</div>' +
-    '<div class="pager"><a href="#home">‹ Home</a><a href="#chapters">Read the story ›</a></div></article>';
+
+function tools(){
+  return '<div class="tools"><button type="button" id="sm" aria-label="'+esc(T("smaller"))+'">A−</button><button type="button" id="lg" aria-label="'+esc(T("larger"))+'">A+</button></div>';
+}
+function note(tr){ return tr ? "" : '<p class="note">' + esc(T("notr")) + '</p>'; }
+function pick(key, fb){ var x = L[lang] && L[lang][key]; return x ? {d:x, tr:true} : {d:fb, tr:lang === "en"}; }
+function chs(){
+  return C.map(function(c,i){
+    var x = L[lang] && L[lang].chapters && L[lang].chapters[i];
+    return x ? {title:x.title, text:x.text, tr:true} : {title:c.title, text:c.text, tr:lang === "en"};
+  });
 }
 
-function donations(){
-  var D = window.DONATIONS;
-  if(!D) return '<h1>PIPPTOP Donations</h1><p>Coming soon.</p>';
-  return '<div class="tools" role="group" aria-label="Text size"><button type="button" id="sm" aria-label="Smaller text">A−</button><button type="button" id="lg" aria-label="Larger text">A+</button></div>' +
-    '<article><h1>' + esc(D.title) + '</h1><div class="body">' + renderBody(D.text) + '</div>' +
-    '<div class="pager"><a href="#home">‹ Home</a><a href="#chapters">Read the story ›</a></div></article>';
+function home(){
+  var pil = T("pil").map(function(p){ return '<div><strong>'+esc(p[0])+'</strong>'+esc(p[1])+'</div>'; }).join("");
+  return '<section class="hero"><div>' +
+    '<h1>PippTop</h1><p class="lead">' + esc(T("lead")) + '</p>' +
+    '<a class="cta" href="#chapter-' + C.length + '">' + esc(T("cta1")) + '</a>' +
+    '<a class="cta alt" href="#about">' + esc(T("cta2")) + '</a>' + SOC + '</div>' +
+    '<img class="coin" src="logo.jpeg" alt="PippTop"></section>' +
+    '<div class="pillars">' + pil + '</div>' +
+    '<div class="panel"><h2>' + esc(T("storyH")) + '</h2><p>' + esc(T("storyP")) + '</p></div>';
 }
-
+function about(){
+  var a = T("about").map(function(p){ return '<p>'+esc(p)+'</p>'; }).join("");
+  var m = T("mission").map(function(p){ return '<p>'+esc(p)+'</p>'; }).join("");
+  return '<div class="about"><img src="logo.jpeg" alt="PippTop"><div><h1>' + esc(T("aboutH")) + '</h1>' + a + '</div></div>' +
+    '<div class="panel"><h2>' + esc(T("missionH")) + '</h2>' + m + '<a class="cta" href="#chapters">' + esc(T("start")) + '</a></div>';
+}
+function chapters(){
+  var list = chs();
+  var li = list.map(function(c,i){ return '<li><a href="#chapter-'+(i+1)+'"><span>'+esc(c.title)+'</span></a></li>'; }).join("");
+  return '<h1>' + esc(T("chH")) + '</h1><p class="lead">' + esc(T(list.length === 1 ? "chOne" : "chMany").replace("{n}", list.length)) + '</p><ul class="list">' + li + '</ul>';
+}
 function chapter(n){
-  var c = C[n-1];
-  if(!c) return '<h1>Chapter not found</h1><p>This chapter does not exist yet. <a href="#chapters">See all chapters</a>.</p>';
-  var paras = renderBody(c.text);
-  var prev = n > 1 ? '<a href="#chapter-' + (n-1) + '">‹ Previous</a>' : '<span>‹ Previous</span>';
-  var next = n < C.length ? '<a href="#chapter-' + (n+1) + '">Next chapter ›</a>' : '<span>Next chapter ›</span>';
-  var wait = n === C.length ? '<div class="await">Await the next chapter…</div>' : '';
-  return '<div class="tools" role="group" aria-label="Text size"><button type="button" id="sm" aria-label="Smaller text">A−</button><button type="button" id="lg" aria-label="Larger text">A+</button></div>' +
-    '<article><h1>' + esc(c.title) + '</h1><div class="body">' + paras + '</div>' + wait +
-    '<div class="pager">' + prev + '<a href="#chapters">All chapters</a>' + next + '</div></article>';
+  var c = chs()[n-1];
+  if(!c) return '<h1>' + esc(T("nf")) + '</h1><p>' + esc(T("nfp")) + ' <a href="#chapters">' + esc(T("all")) + '</a></p>';
+  var prev = n > 1 ? '<a href="#chapter-'+(n-1)+'">‹ '+esc(T("prev"))+'</a>' : '<span>‹ '+esc(T("prev"))+'</span>';
+  var next = n < C.length ? '<a href="#chapter-'+(n+1)+'">'+esc(T("next"))+' ›</a>' : '<span>'+esc(T("next"))+' ›</span>';
+  var wait = n === C.length ? '<div class="await">' + esc(T("await")) + '</div>' : '';
+  return tools() + '<article><h1>' + esc(c.title) + '</h1>' + note(c.tr) + '<div class="body">' + renderBody(c.text) + '</div>' + wait +
+    '<div class="pager">' + prev + '<a href="#chapters">' + esc(T("all")) + '</a>' + next + '</div></article>';
+}
+function page(key, fb, sub){
+  var p = pick(key, fb);
+  if(!p.d) return '<h1>…</h1>';
+  return tools() + '<article><h1>' + esc(p.d.title) + '</h1>' + (p.d.subtitle ? '<p class="eyebrow">' + esc(p.d.subtitle) + '</p>' : '') + note(p.tr) +
+    '<div class="body">' + renderBody(p.d.text) + '</div>' +
+    '<div class="pager"><a href="#home">‹ ' + esc(T("home")) + '</a><a href="#chapters">' + esc(T("read")) + ' ›</a></div></article>';
 }
 
-/* ---------- router (only plain #name hashes) ---------- */
 function route(){
-  var h = (location.hash || "#home").slice(1);
-  var key = "home", html;
+  var h = (location.hash || "#home").slice(1), key = "home", html;
   if(h === "about"){ key = "about"; html = about(); }
-  else if(h === "donations"){ key = "donations"; html = donations(); }
-  else if(h === "philosophical"){ key = "philosophical"; html = philo(); }
+  else if(h === "donations"){ key = "donations"; html = page("donations", window.DONATIONS); }
+  else if(h === "philosophical"){ key = "philosophical"; html = page("philosophical", window.PHILOSOPHICAL); }
   else if(h === "chapters"){ key = "chapters"; html = chapters(); }
   else if(/^chapter-\d+$/.test(h)){ key = "chapters"; html = chapter(parseInt(h.slice(8), 10)); }
   else { html = home(); }
@@ -250,8 +260,20 @@ function route(){
   if(lg) lg.onclick = function(){ setSize(0.08); };
   window.scrollTo(0,0);
 }
+function applyLang(){
+  root.lang = lang; document.title = T("title"); sel.value = lang;
+  document.querySelectorAll("nav a").forEach(function(a){ a.textContent = T("nav")[a.dataset.r]; });
+  applyTheme(root.getAttribute("data-theme") || "light");
+  document.getElementById("foot").innerHTML = SOC + '<span>' + esc(T("footer")) + '</span>';
+  route();
+}
+sel.onchange = function(){ lang = sel.value; save("pt-lang", lang); applyLang(); };
+var sv = load("pt-lang"), nl = (navigator.language || "en").slice(0,2);
+lang = LANGS.some(function(x){ return x[0] === sv; }) ? sv : (LANGS.some(function(x){ return x[0] === nl; }) ? nl : "en");
+var st = load("pt-theme");
+root.setAttribute("data-theme", st || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
 window.addEventListener("hashchange", route);
-route();
+applyLang();
 </script>
 </body>
 </html>
