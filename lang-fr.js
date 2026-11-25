@@ -140,3 +140,4 @@ window.L.fr.chapters[4] = {
   ]
 };
 window.L.fr.philosophical = { title: "Le fondement philosophique de PIPPTOP", subtitle: window.L.fr.chapters[2].title, text: window.L.fr.chapters[2].text };
+window.L.fr.caLabel="Adresse officielle du contrat"; window.L.fr.caCopy="Copier"; window.L.fr.caDone="Copié !";

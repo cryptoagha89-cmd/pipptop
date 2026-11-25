@@ -86,6 +86,9 @@ article .body li{margin-bottom:.6em}
 .social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--teal);color:var(--bg);transition:transform .2s,background .2s}
 .social a:hover{background:var(--gold);transform:translateY(-3px)}
 .social svg{width:22px;height:22px;fill:currentColor}
+.ca{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:1rem 1.2rem;margin-top:.5rem}
+.ca-l{width:100%;font-weight:700;color:var(--soft);font-size:.95rem}
+.ca code{flex:1 1 240px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1rem;word-break:break-all;color:var(--ink)}
 .eyebrow{color:var(--soft);font-family:var(--serif);font-size:1.2rem;margin:-.4rem 0 1.6rem}
 select{font:inherit;font-weight:700;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:.4rem .7rem;cursor:pointer}
 .note{background:var(--peach);color:var(--ink);padding:.6rem 1rem;border-radius:12px;font-size:.95rem}
@@ -110,12 +113,13 @@ footer{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-alig
 <main id="app" tabindex="-1"></main>
 <footer id="foot"></footer>
 
-<script src="chapters.js?v=4"></script>
-<script src="lang-zh.js?v=4"></script>
-<script src="lang-fr.js?v=4"></script>
-<script src="lang-es.js?v=4"></script>
+<script src="chapters.js?v=5"></script>
+<script src="lang-zh.js?v=5"></script>
+<script src="lang-fr.js?v=5"></script>
+<script src="lang-es.js?v=5"></script>
 <script>
 var C = window.CHAPTERS || [];
+var CA = "FujCqe2JFQXPm2A1auAFTENkpzZyTYDwXqxBr76Mpump";
 var SOC = '<div class="social">' +
   '<a href="https://x.com/PIPPTOP?s=20" target="_blank" rel="noopener noreferrer" aria-label="PippTop on X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>' +
   '<a href="https://t.me/pipptop" target="_blank" rel="noopener noreferrer" aria-label="PippTop on Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a></div>';
@@ -138,6 +142,7 @@ L.en = {
   prev:"Previous", next:"Next chapter", all:"All chapters", await:"Await the next chapter…",
   nf:"Chapter not found", nfp:"This chapter does not exist yet.", home:"Home", read:"Read the story",
   notr:"This part is not translated yet, so it is shown in English.",
+  caLabel:"Official contract address", caCopy:"Copy", caDone:"Copied!",
   smaller:"Smaller text", larger:"Larger text", footer:"PippTop · A community memecoin for hope."
 };
 var LANGS = [["en","English"],["zh","中文"],["fr","Français"],["es","Español"]];
@@ -212,6 +217,7 @@ function home(){
     '<a class="cta" href="#chapter-' + C.length + '">' + esc(T("cta1")) + '</a>' +
     '<a class="cta alt" href="#about">' + esc(T("cta2")) + '</a>' + SOC + '</div>' +
     '<img class="coin" src="logo.jpeg" alt="PippTop"></section>' +
+    '<div class="ca"><span class="ca-l">' + esc(T("caLabel")) + '</span><code id="ca">' + CA + '</code><button type="button" id="cacopy">' + esc(T("caCopy")) + '</button></div>' +
     '<div class="pillars">' + pil + '</div>' +
     '<div class="panel"><h2>' + esc(T("storyH")) + '</h2><p>' + esc(T("storyP")) + '</p></div>';
 }
@@ -255,6 +261,12 @@ function route(){
   document.querySelectorAll("nav a").forEach(function(a){
     if(a.dataset.r === key) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
   });
+  var cb = document.getElementById("cacopy");
+  if(cb) cb.onclick = function(){
+    function ok(){ cb.textContent = T("caDone"); setTimeout(function(){ cb.textContent = T("caCopy"); }, 2000); }
+    try { navigator.clipboard.writeText(CA).then(ok, function(){ sel2(); }); } catch(e){ sel2(); }
+    function sel2(){ try { var r = document.createRange(); r.selectNodeContents(document.getElementById("ca")); var g = getSelection(); g.removeAllRanges(); g.addRange(r); document.execCommand("copy"); ok(); } catch(e){} }
+  };
   var sm = document.getElementById("sm"), lg = document.getElementById("lg");
   if(sm) sm.onclick = function(){ setSize(-0.08); };
   if(lg) lg.onclick = function(){ setSize(0.08); };
